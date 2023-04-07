@@ -1,0 +1,19 @@
+name: Stepfront Utilities CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "3.7.9" # replace with your Flutter version
+      - name: Test
+        run: flutter test

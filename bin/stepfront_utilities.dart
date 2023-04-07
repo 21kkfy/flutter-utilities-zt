@@ -1,5 +1,5 @@
-import 'package:stepfront_utilities/stepfront_utilities.dart' as stepfront_utilities;
+import 'package:stepfront_utilities/stepfront_utilities.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${stepfront_utilities.calculate()}!');
+  print('Hello world: ${Utilities().toString()}!');
 }

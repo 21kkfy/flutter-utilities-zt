@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 class SFExceptionModel implements Exception {
   final String type;
   final String title;
@@ -31,8 +33,11 @@ class SFExceptionModel implements Exception {
       }
       exceptionData[key] = value;
     }
+
+    /// print("TEST123: ${exceptionData.toString()}");
+    print("TEST123: ${exceptionData["status"]}");
     return SFExceptionModel(
-      type: exceptionData["Exception"] ?? "Exception",
+      type: exceptionData["type"] ?? "Exception",
       title: exceptionData["title"] ?? "Title",
       status: int.parse(exceptionData["status"] ?? 0),
       detail: exceptionData["detail"] ?? "Couldn't get details from back-end",

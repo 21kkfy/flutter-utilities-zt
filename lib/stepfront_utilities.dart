@@ -15,7 +15,7 @@ class Utilities {
     Get.updateLocale(Locale(language, country));
   }
 
-  void displayCustomErrorSnackbar(String errorAsString) {
+  bool displayCustomErrorSnackbar(String errorAsString) {
     SFExceptionModel exceptionModel =
         SFExceptionModel.fromString(errorAsString);
     Color backgroundColor = decideBackgroundColor(exceptionModel.status);
@@ -23,11 +23,11 @@ class Utilities {
       Get.snackbar("SomethingWentWrong".tr,
           exceptionModel.detail.toString().substring(0, 450),
           colorText: AppColors.white, backgroundColor: backgroundColor);
-      return;
+      return true;
     }
     Get.snackbar("SomethingWentWrong".tr, exceptionModel.detail.toString(),
         colorText: AppColors.white, backgroundColor: backgroundColor);
-    return;
+    return true;
   }
 
   void displayExceptionSnackbar(String errorAsString) {

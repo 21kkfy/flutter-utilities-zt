@@ -1,10 +1,10 @@
 name: stepfront_utilities
-description: A sample command-line application.
+description: Stepfront utilities for snackbars, updating locale, custom exception model.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: ">=2.19.6 <3.0.0"
 
 # dependencies:
 #   path: ^1.8.0

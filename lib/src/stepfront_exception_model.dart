@@ -1,21 +1,25 @@
 class SFExceptionModel implements Exception {
+  final int? code;
+  final String? message;
   final String? type;
   final String? title;
   final int? status;
   final String? detail;
 
   SFExceptionModel({
+    this.code,
+    this.message,
     this.type,
     this.title,
     this.status,
     this.detail,
   });
   static SFExceptionModel fromString(String exceptionString) {
-// Remove curly braces and split the string by commas
+    // Remove curly braces and split the string by commas
     List<String> parts =
         exceptionString.replaceAll('{', '').replaceAll('}', '').split(', ');
 
-// Create a new map and populate it with the key-value pairs from the string
+    // Create a new map and populate it with the key-value pairs from the string
     Map<String, dynamic> exceptionData = {};
     for (String part in parts) {
       List<String> keyValue = part.split(': ');
@@ -35,6 +39,8 @@ class SFExceptionModel implements Exception {
     /// print("TEST123: ${exceptionData.toString()}");
     print("TEST123: ${exceptionData["status"]}");
     return SFExceptionModel(
+      code: exceptionData["code"] ?? 0,
+      message: exceptionData["message"] ?? "",
       type: exceptionData["type"] ?? "Exception",
       title: exceptionData["title"] ?? "Title",
       status: int.parse(exceptionData["status"] ?? 0),

@@ -1,16 +1,14 @@
-import 'dart:developer';
-
 class SFExceptionModel implements Exception {
-  final String type;
-  final String title;
-  final int status;
-  final String detail;
+  final String? type;
+  final String? title;
+  final int? status;
+  final String? detail;
 
   SFExceptionModel({
-    required this.type,
-    required this.title,
-    required this.status,
-    required this.detail,
+    this.type,
+    this.title,
+    this.status,
+    this.detail,
   });
   static SFExceptionModel fromString(String exceptionString) {
 // Remove curly braces and split the string by commas

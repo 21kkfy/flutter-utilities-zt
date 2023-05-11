@@ -15,10 +15,10 @@ class Utilities {
     Get.updateLocale(Locale(language, country));
   }
 
-  bool displayCustomErrorSnackbar(String errorAsString) {
+  bool displaySFExceptionSnackbar(String errorAsString) {
     SFExceptionModel exceptionModel =
         SFExceptionModel.fromString(errorAsString);
-    Color backgroundColor = decideBackgroundColor(exceptionModel.status);
+    Color backgroundColor = decideBackgroundColor(exceptionModel.status ?? 0);
     if (exceptionModel.detail.toString().length > 450) {
       Get.snackbar("SomethingWentWrong".tr,
           exceptionModel.detail.toString().substring(0, 450),
@@ -30,15 +30,15 @@ class Utilities {
     return true;
   }
 
-  void displayExceptionSnackbar(String errorAsString) {
+  void displayStringSnackbar(String errorAsString) {
     if (errorAsString.toString().length > 450) {
       Get.snackbar(
           "SomethingWentWrong".tr, errorAsString.toString().substring(0, 450),
-          colorText: AppColors.white, backgroundColor: AppColors.warningRed);
+          colorText: AppColors.white, backgroundColor: AppColors.red);
       return;
     }
     Get.snackbar("SomethingWentWrong".tr, errorAsString.toString(),
-        colorText: AppColors.white, backgroundColor: AppColors.warningRed);
+        colorText: AppColors.white, backgroundColor: AppColors.red);
     return;
   }
 
@@ -62,7 +62,7 @@ class Utilities {
 
   Color decideBackgroundColor(int status) {
     if (status == 404 || (status >= 500 && status < 600)) {
-      return AppColors.warningRed;
+      return AppColors.red;
     } else if (status == 400) {
       return AppColors.yellow;
     } else {

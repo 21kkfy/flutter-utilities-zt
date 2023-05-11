@@ -31,15 +31,15 @@ class Utilities {
     return true;
   }
 
-  void displayStringSnackbar(String errorAsString) {
+  void displayStringSnackbar(String errorAsString, {Color? color}) {
     if (errorAsString.toString().length > 450) {
       Get.snackbar(
           "SomethingWentWrong".tr, errorAsString.toString().substring(0, 450),
-          colorText: AppColors.white, backgroundColor: AppColors.red);
+          colorText: AppColors.white, backgroundColor: color ?? AppColors.red);
       return;
     }
     Get.snackbar("SomethingWentWrong".tr, errorAsString.toString(),
-        colorText: AppColors.white, backgroundColor: AppColors.red);
+        colorText: AppColors.white, backgroundColor: color ?? AppColors.red);
     return;
   }
 

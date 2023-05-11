@@ -3,7 +3,6 @@ import 'dart:ui';
 
 import 'package:get/get.dart';
 import 'dart:io';
-import 'package:image/image.dart' as img;
 import 'package:stepfront_utilities/app_colors.dart';
 import 'package:stepfront_utilities/stepfront_exception_model.dart';
 
@@ -68,26 +67,6 @@ class Utilities {
     } else {
       return AppColors.white;
     }
-  }
-
-  Future<File> convertJpgToPng(File jpgFile) async {
-    // Read the JPEG file as bytes
-    Uint8List jpegBytes = await jpgFile.readAsBytes();
-
-    // Decode the JPEG bytes into an image object
-    img.Image jpgImage = img.decodeJpg(jpegBytes)!;
-
-    // Convert the JPEG image object to PNG format
-    img.Image pngImage = img.copyResize(jpgImage,
-        width: jpgImage.width, height: jpgImage.height);
-    List<int> pngBytes = img.encodePng(pngImage);
-
-    // Save the PNG bytes to a new file
-    String newPath = jpgFile.path.replaceAll('.jpg', '.png');
-    File pngFile = File(newPath);
-    await pngFile.writeAsBytes(pngBytes);
-
-    return pngFile;
   }
 
   void updateLocale(String languageChoice) {

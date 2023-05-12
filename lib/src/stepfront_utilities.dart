@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:stepfront_utilities/src/app_colors.dart';
 import 'package:stepfront_utilities/src/stepfront_exception_model.dart';
 
-class Utilities {
+abstract class SFUtilities {
   void setLocale(String languageCode) {
     List<String> languageCodeList = languageCode.split("_");
     String language = languageCodeList[0]; // "sr"

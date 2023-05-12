@@ -187,7 +187,7 @@ abstract class SFMapService {
 
   Future<GoogleMap> getMap(List<LatLng> latLngs);
 
-  Future<double> getTotalDistance(LatLng lastLatLng) async {
+  Future<double> _getTotalDistance(LatLng lastLatLng) async {
     List<LatLng> polylineCoordinates = [];
     LatLng targetLocation = lastLatLng;
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
@@ -244,14 +244,15 @@ abstract class SFMapService {
     sumLng /= (latLngs.length + 1);
 
     calculatedCameraPosition = LatLng(sumLat, sumLng);
-    double totalDistance = await getTotalDistance(latLngs.last);
+    double totalDistance = await _getTotalDistance(latLngs.last);
     return CameraPosition(
       target: calculatedCameraPosition,
-      zoom: getZoomForCamera(totalDistance),
+      zoom: _getZoomForCamera(totalDistance),
     );
   }
 
-  Future<Marker> _createMarker(
+  /// might be removed idk
+  Future<Marker> createMarker(
       int markerIndex, LatLng dropLocation, Color color);
 
   /// Calculates and returns the zoom level required for the camera based on the [totalDistance] of the route.
@@ -268,7 +269,7 @@ abstract class SFMapService {
   /// double totalDistance = 2500;
   /// double zoomLevel = getZoomForCamera(totalDistance);
   /// ```
-  double getZoomForCamera(double totalDistance) {
+  double _getZoomForCamera(double totalDistance) {
     double zoom;
     // 1000 meters
     if (totalDistance < 1000) {

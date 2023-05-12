@@ -172,14 +172,14 @@ abstract class SFMapService {
     ));
 
     /// Add the route markers to the worker marker and return it.
-    markers.addAll(await _getAllOtherMapMarkers(coords));
+    markers.addAll(await getAllOtherMapMarkers(coords));
     return markers;
   }
 
   /// This method should prepare all of the markers
   /// that ISN'T end-user's marker and add it to markers
   /// that will later be displayed on Google Map.
-  Future<Set<Marker>> _getAllOtherMapMarkers(List<LatLng> coords);
+  Future<Set<Marker>> getAllOtherMapMarkers(List<LatLng> coords);
 
   /// This method should return all of the coordinates inside the data models
   /// passed to it as a List<LatLng> to be used in various methods.

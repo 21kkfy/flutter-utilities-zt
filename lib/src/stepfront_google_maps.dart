@@ -82,7 +82,7 @@ abstract class SFMapService {
     distance = totalDistance;
 
     //add to the list of poly line coordinates
-    addPolyLine(polylineCoordinates);
+    _addPolyline(polylineCoordinates);
   }
 
   /// Adds a polyline to the map with given [polylineCoordinates].
@@ -101,7 +101,7 @@ abstract class SFMapService {
   /// ];
   /// addPolyLine(coords);
   /// ```
-  addPolyLine(List<LatLng> polylineCoordinates, {Color? color}) {
+  _addPolyline(List<LatLng> polylineCoordinates, {Color? color}) {
     PolylineId id = const PolylineId("poly");
     Polyline polyline = Polyline(
       polylineId: id,

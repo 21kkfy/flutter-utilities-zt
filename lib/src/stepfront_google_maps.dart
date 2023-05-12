@@ -6,7 +6,6 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:developer' as dev;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// ! DO NOT REMOVE, CRASHES iOS!!!!!!!!!! import 'dart:typed_data';
 // ignore: unnecessary_import, unused_import

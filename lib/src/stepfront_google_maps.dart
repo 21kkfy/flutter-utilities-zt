@@ -183,7 +183,9 @@ abstract class SFMapService {
 
   /// This method should return all of the coordinates inside the data models
   /// passed to it as a List<LatLng> to be used in various methods.
-  List<LatLng> _getAllLatLngs(List<Object> objects);
+  List<LatLng> getAllLatLngs(List<Object> objects);
+
+  Future<GoogleMap> getMap(List<LatLng> latLngs);
 
   Future<double> getTotalDistance(LatLng lastLatLng) async {
     List<LatLng> polylineCoordinates = [];

@@ -1,8 +1,9 @@
-/* import 'dart:ui';
+import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:stepfront_utilities/src/stepfront_utilities.dart';
+import 'package:stepfront_utilities/utilities.dart';
 
 void main() {
   group('Utilities', () {
@@ -11,7 +12,7 @@ void main() {
         });
     test('setLocale sets the correct locale', () {
       // Set up
-      SFUtilities utilities = SFUtilities();
+      SFUtilities utilities = Utilities();
       Locale expectedLocale = Locale('sr', 'SR');
 
       // Execute
@@ -22,4 +23,3 @@ void main() {
     });
   });
 }
- */

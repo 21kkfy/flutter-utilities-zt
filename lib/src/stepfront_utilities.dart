@@ -100,6 +100,15 @@ abstract class SFUtilities {
     }
   }
 
+  /// Encrypts the provided [plainText] using AES encryption algorithm.
+  /// Returns the base64-encoded encrypted result.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// String plainText = 'Sensitive data';
+  /// String encryptedText = encrypt(plainText);
+  /// print(encryptedText);
+  /// ```
   String encrypt(String plainText) {
     /// key length as 32
     final key = Key.fromUtf8("0rL7'Q')Y#K9t0z0kWYmWAtOQ#=aN{hK");
@@ -113,6 +122,15 @@ abstract class SFUtilities {
     return encrypted.base64;
   }
 
+  /// Decrypts the provided [encryptedString] using AES encryption algorithm.
+  /// Returns the decrypted result as a plain text string.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// String encryptedText = 'SOME_ENCRYPTED_TEXT';
+  /// String decryptedText = decrypt(encryptedText);
+  /// print(decryptedText);
+  /// ```
   String decrypt(String encryptedString) {
     Encrypted encrypted = Encrypted.fromBase64(encryptedString);
 

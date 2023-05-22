@@ -14,6 +14,6 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
         with:
-          flutter-version: "3.7.9" # replace with your Flutter version
+          flutter-version: "3.10.0" # replace with your Flutter version
       - name: Test
         run: flutter test

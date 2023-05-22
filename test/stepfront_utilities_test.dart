@@ -16,7 +16,7 @@ void main() {
       Locale expectedLocale = Locale('sr', 'SR');
 
       // Execute
-      utilities.setLocale('sr_SR');
+      utilities.updateLocale('sr_SR');
 
       // Verify
       expect(Get.locale, expectedLocale);

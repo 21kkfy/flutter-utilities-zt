@@ -12,4 +12,7 @@ class AppColors {
 
   /// This color's hexCode: 0xffFFFFFF
   static Color get white => const Color(0xffFFFFFF);
+
+  /// This color's hexCode: 0xffFFFFFF
+  static Color get blue => const Color(0xff2196F3);
 }

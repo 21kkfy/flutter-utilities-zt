@@ -43,7 +43,7 @@ abstract class SFUtilities {
 
   void displayFriendlyUserSnackbar(String title, String message) {
     Get.snackbar(title, message,
-        colorText: AppColors.white, backgroundColor: AppColors.yellow);
+        colorText: AppColors.white, backgroundColor: AppColors.blue);
     return;
   }
 

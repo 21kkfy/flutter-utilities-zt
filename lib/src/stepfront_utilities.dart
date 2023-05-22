@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:encrypt/encrypt.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import 'package:stepfront_utilities/src/app_colors.dart';
 import 'package:stepfront_utilities/src/stepfront_exception_model.dart';
@@ -122,5 +123,24 @@ abstract class SFUtilities {
 
     final decrypted = encrypter.decrypt(encrypted, iv: iv);
     return decrypted;
+  }
+
+  /// Converts a [DateTime] object to a formatted string representation.
+  /// If [dateTime] is null, returns '--:--' as the default value.
+  /// The [format] parameter allows specifying a custom format for the string representation.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// DateTime? myDateTime = DateTime.now();
+  /// String formattedDateTime = getDateTimeAsString(myDateTime, format: 'yyyy-MM-dd HH:mm:ss');
+  /// print(formattedDateTime);
+  /// ```
+  String getDateTimeAsString(DateTime? dateTime, {String? format}) {
+    if (dateTime == null) {
+      return '--:--';
+    }
+
+    DateFormat formatter = DateFormat(format ?? 'H:mm');
+    return formatter.format(dateTime);
   }
 }

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:encrypt/encrypt.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:stepfront_utilities/src/app_colors.dart';
 import 'package:stepfront_utilities/src/stepfront_exception_model.dart';
@@ -142,5 +143,25 @@ abstract class SFUtilities {
 
     DateFormat formatter = DateFormat(format ?? 'H:mm');
     return formatter.format(dateTime);
+  }
+
+  /// Reads the API key from the environment file using Flutter DotEnv.
+  /// If [keyName] is provided, it retrieves the corresponding API key value.
+  /// If [fileName] is provided, it loads the environment file with the specified name; otherwise, it loads the default ".env" file.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// String apiKey = await readAPIKey(keyName: 'GOOGLE_MAP_API_KEY', fileName: '.env');
+  /// print(apiKey);
+  /// ```
+  Future<String> readAPIKey({String? keyName, String? fileName}) async {
+    try {
+      await dotenv.load(fileName: fileName ?? '.env');
+
+      /// ! Don't print .env on release version, as that could leak the API key.
+      return dotenv.env[keyName ?? 'GOOGLE_MAP_API_KEY']!;
+    } catch (e) {
+      throw Exception(e);
+    }
   }
 }

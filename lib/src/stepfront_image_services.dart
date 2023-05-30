@@ -30,6 +30,8 @@ abstract class SFImageServices {
   ///  ),
   ///);
   /// ```
+  @Deprecated(
+      "Create a widget that will be used as an Icon and then call toBitmapDescriptor() method.")
   Future<Uint8List> createMarkerIcon();
 
   static SvgPicture svgImage(String svgTitle, [Color? color]) {
@@ -56,6 +58,8 @@ abstract class SFImageServices {
   * Delivered routes (They will be blue-ish if they have been already delivered to.)
   */
   /* https://stackoverflow.com/questions/60019684/use-gradient-with-paint-object-in-flutter-canvas */
+  @Deprecated(
+      "Create a widget that will be used as an Icon and then call toBitmapDescriptor() method.")
   Future<Uint8List> getBytesFromCanvasForTextStandard(
       int width, int height, int index) async {
     final ui.PictureRecorder pictureRecorder = ui.PictureRecorder();

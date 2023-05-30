@@ -126,7 +126,7 @@ abstract class SFMapService {
   /// print("Distance between two points: $distance km");
   /// double calculateDistance(lat1, lon1, lat2, lon2)
   /// ```
-  double calculateDistance(lat1, lon1, lat2, lon2) {
+  double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     var p = 0.017453292519943295;
     var a = 0.5 -
         cos((lat2 - lat1) * p) / 2 +

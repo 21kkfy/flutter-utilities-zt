@@ -1,4 +1,4 @@
-class SFExceptionModel implements Exception {
+/* class SFExceptionModel implements Exception {
   final String type;
   final String title;
   final int status;
@@ -45,3 +45,4 @@ class SFExceptionModel implements Exception {
   @override
   String toString() => '$type: $title (status $status) - $detail';
 }
+ */

@@ -1,4 +1,4 @@
-import 'dart:ui';
+/* import 'dart:ui';
 
 class AppColors {
   /// This color's hexCode: 0xffFF6565
@@ -13,3 +13,4 @@ class AppColors {
   /// This color's hexCode: 0xffFFFFFF
   static Color get white => const Color(0xffFFFFFF);
 }
+ */

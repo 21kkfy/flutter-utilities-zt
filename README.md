@@ -2,6 +2,11 @@
 
 This guide provides step-by-step instructions on how to access a private GitHub repository using an SSH key. By following these steps, a junior Flutter developer can correctly clone the repository and run `flutter pub get` without any issues.
 
+## IMPORTANT
+
+In-order to run & build projects that uses Stepfront utilities library, you need to setup your SSH key following this guide.
+Otherwise, you will not able to run & build these projects.
+
 ## Steps
 
 1. **Generate an SSH key pair:**

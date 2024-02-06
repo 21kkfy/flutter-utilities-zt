@@ -1,16 +1,16 @@
-/* class SFExceptionModel implements Exception {
+/* class ZTExceptionModel implements Exception {
   final String type;
   final String title;
   final int status;
   final String detail;
 
-  SFExceptionModel({
+  ZTExceptionModel({
     required this.type,
     required this.title,
     required this.status,
     required this.detail,
   });
-  static SFExceptionModel fromString(String exceptionString) {
+  static ZTExceptionModel fromString(String exceptionString) {
 // Remove curly braces and split the string by commas
     List<String> parts =
         exceptionString.replaceAll('{', '').replaceAll('}', '').split(', ');
@@ -34,7 +34,7 @@
 
     /// print("TEST123: ${exceptionData.toString()}");
     print("TEST123: ${exceptionData["status"]}");
-    return SFExceptionModel(
+    return ZTExceptionModel(
       type: exceptionData["type"] ?? "Exception",
       title: exceptionData["title"] ?? "Title",
       status: int.parse(exceptionData["status"] ?? 0),

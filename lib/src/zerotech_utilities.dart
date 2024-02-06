@@ -17,7 +17,7 @@ abstract class ZTUtilities {
     Get.updateLocale(Locale(language, country));
   }
 
-  bool displaySFExceptionSnackbar(String errorAsString) {
+  bool displayZTExceptionSnackbar(String errorAsString) {
     ZTExceptionModel exceptionModel =
         ZTExceptionModel.fromString(errorAsString);
     Color backgroundColor = decideBackgroundColor(exceptionModel.status ?? 0);

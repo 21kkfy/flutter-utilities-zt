@@ -13,7 +13,7 @@ import 'dart:typed_data';
 import 'package:zerotech_utilities/src/app_colors.dart';
 // ! DO NOT REMOVE, CRASHES iOS!!!!!!!!!! import 'dart:typed_data';
 
-abstract class SFMapService {
+abstract class ZTMapService {
   GoogleMapController? mapController; //contrller for Google map
 
   late LatLng startLocation = const LatLng(56.2639, 9.5018);
@@ -26,7 +26,7 @@ abstract class SFMapService {
   /// subclass, in the subclass call the super constructor.
   /// More on super constructors:
   /// https://www.geeksforgeeks.org/super-constructor-in-dart/
-  SFMapService(String apiKey) {
+  ZTMapService(String apiKey) {
     /* 
     dotenv.load(fileName: ".env");
     googleAPIKey = dotenv.env['API_KEY']!; */

@@ -17,7 +17,7 @@ import 'package:path_provider/path_provider.dart';
 
 /// ! DO NOT REMOVE, CRASHES iOS!!!!!!!!!!
 
-abstract class SFImageServices {
+abstract class ZTImageServices {
   /// This method should be overridden to create a marker icon.
   /// Example use:
   /// ```dart

@@ -1,4 +1,4 @@
-name: Stepfront Utilities CI
+name: ZeroTech Utilities CI
 
 on:
   push:

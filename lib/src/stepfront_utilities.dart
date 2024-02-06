@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:stepfront_utilities/src/app_colors.dart';
-import 'package:stepfront_utilities/src/stepfront_exception_model.dart';
+import 'package:zerotech_utilities/src/app_colors.dart';
+import 'package:zerotech_utilities/src/zerotech_exception_model.dart';
 
 abstract class SFUtilities {
   @Deprecated('Use [updateLocale]')

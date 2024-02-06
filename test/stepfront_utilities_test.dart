@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
-import 'package:stepfront_utilities/src/stepfront_utilities.dart';
-import 'package:stepfront_utilities/utilities.dart';
+import 'package:zerotech_utilities/src/zerotech_utilities.dart';
+import 'package:zerotech_utilities/utilities.dart';
 
 void main() {
   group('Utilities', () {

@@ -4,7 +4,7 @@ This guide provides step-by-step instructions on how to access a private GitHub 
 
 ## IMPORTANT
 
-In-order to run & build projects that uses Stepfront utilities library, you need to setup your SSH key following this guide.
+In-order to run & build projects that uses ZeroTech utilities library, you need to setup your SSH key following this guide.
 Otherwise, you will not able to run & build these projects.
 
 ## Steps
@@ -77,4 +77,3 @@ Otherwise, you will not able to run & build these projects.
     - They can use this URL to configure their Flutter project to access the private repository.
 
 That's it! The junior developer should now be able to access the private GitHub repository using their own SSH key.
-

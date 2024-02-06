@@ -6,9 +6,9 @@ import 'package:intl/intl.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:zerotech_utilities/src/app_colors.dart';
-import 'package:zerotech_utilities/src/zerotech_exception_model.dart';
+import 'package:zerotech_utilities/src/stepfront_exception_model.dart';
 
-abstract class SFUtilities {
+abstract class ZTUtilities {
   @Deprecated('Use [updateLocale]')
   void setLocale(String languageCode) {
     List<String> languageCodeList = languageCode.split("_");
@@ -18,8 +18,8 @@ abstract class SFUtilities {
   }
 
   bool displaySFExceptionSnackbar(String errorAsString) {
-    SFExceptionModel exceptionModel =
-        SFExceptionModel.fromString(errorAsString);
+    ZTExceptionModel exceptionModel =
+        ZTExceptionModel.fromString(errorAsString);
     Color backgroundColor = decideBackgroundColor(exceptionModel.status ?? 0);
     if (exceptionModel.detail.toString().length > 450) {
       Get.snackbar("SomethingWentWrong".tr,

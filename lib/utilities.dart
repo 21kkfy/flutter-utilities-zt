@@ -1,3 +1,3 @@
 import 'package:zerotech_utilities/src/zerotech_utilities.dart';
 
-class Utilities extends SFUtilities {}
+class Utilities extends ZTUtilities {}

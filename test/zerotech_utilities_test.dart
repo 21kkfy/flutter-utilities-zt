@@ -12,7 +12,7 @@ void main() {
         });
     test('setLocale sets the correct locale', () {
       // Set up
-      SFUtilities utilities = Utilities();
+      ZTUtilities utilities = Utilities();
       Locale expectedLocale = Locale('sr', 'SR');
 
       // Execute

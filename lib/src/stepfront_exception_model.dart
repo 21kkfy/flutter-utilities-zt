@@ -1,4 +1,4 @@
-class SFExceptionModel implements Exception {
+class ZTExceptionModel implements Exception {
   final int? code;
   final String? message;
   final String? type;
@@ -6,7 +6,7 @@ class SFExceptionModel implements Exception {
   final int? status;
   final String? detail;
 
-  SFExceptionModel({
+  ZTExceptionModel({
     this.code,
     this.message,
     this.type,
@@ -14,7 +14,7 @@ class SFExceptionModel implements Exception {
     this.status,
     this.detail,
   });
-  static SFExceptionModel fromString(String exceptionString) {
+  static ZTExceptionModel fromString(String exceptionString) {
     // Remove curly braces and split the string by commas
     List<String> parts =
         exceptionString.replaceAll('{', '').replaceAll('}', '').split(', ');
@@ -38,7 +38,7 @@ class SFExceptionModel implements Exception {
 
     /// print("TEST123: ${exceptionData.toString()}");
     print("TEST123: ${exceptionData["status"]}");
-    return SFExceptionModel(
+    return ZTExceptionModel(
       code: exceptionData["code"] ?? 0,
       message: exceptionData["message"] ?? "",
       type: exceptionData["type"] ?? "Exception",
